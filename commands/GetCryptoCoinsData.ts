@@ -28,25 +28,23 @@ export default class GetCryptoCoinsData extends BaseCommand {
     stayAlive: false,
   }
 
-  public async run() {  
+  public async run() {
     {
       try {
-        console.log('Starting fetching data from Coingecko')
+       this.logger.info('Starting fetching data from Coingecko')
         const response = await axios.get('https://api.coingecko.com/api/v3/coins/list', {
           params: {
             include_platform: true,
           },
         })
 
-        if (true) {
-          const coinsData = response.data
+        if (response.status === 200) {
+          const coinsData = response.data;
           await this.saveToDatabase(coinsData)
-          console.info('Data Saved Successfully!')
-        } else {
-          console.error('Error while saving the data!')
+          this.logger.info('Data Saved Successfully!')
         }
       } catch (error) {
-        console.error(`Error: ${error.message}`)
+        this.logger.error(`Error: ${error.message}`)
       }
     }
   }
