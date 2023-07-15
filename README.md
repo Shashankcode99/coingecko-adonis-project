@@ -26,4 +26,10 @@
  - run your command
     - _**node ace command_name**_
 
+#DATABASE SCHEMA
+ - Single Table with following columns
+      - **id (string)**
+      - **name (string)**
+      - **symbol (string)**
+      - **platforms (jsonob)**
  
