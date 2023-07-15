@@ -6,12 +6,12 @@
 
 #SETUP ENV VARIABLES
 - Add given variables in env.ts file
-**- DB_CONNECTION: Env.schema.string(),
-  - PG_HOST: Env.schema.string({ format: 'host' }),
-  - PG_PORT: Env.schema.number(),
-  - PG_USER: Env.schema.string(),
-  - PG_PASSWORD: Env.schema.string.optional(),
-  - PG_DB_NAME: Env.schema.string()**
+  - **DB_CONNECTION: Env.schema.string(),**
+  - **PG_HOST: Env.schema.string({ format: 'host' }),**
+  - **PG_PORT: Env.schema.number(),**
+  - **PG_USER: Env.schema.string(),**
+  - **PG_PASSWORD: Env.schema.string.optional(),**
+  - **PG_DB_NAME: Env.schema.string()**
 
 #CREATE MIGRATION
  - run command -> _**node ace make:migration migration_name**_
